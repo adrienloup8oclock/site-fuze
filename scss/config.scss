@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+/**
+ * 1. Set path default image file.
+ * 2. Breakpoint of responsive.
+ */
+
+$images_dir: "../images/";
+$medias_dir: "../medias/images/";
+
+$desktop-large:     1920;
+$desktop-medium:    1440;
+$desktop-small:     1280;
+$tablet-landscape:  1024;
+$tablet-portrait:   768;
+$mobile-landscape:  640;
+$mobile-portrait:   320;

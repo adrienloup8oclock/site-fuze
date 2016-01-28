@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+@-webkit-viewport { zoom: 1; }
+@-moz-viewport { zoom: 1; }
+@-ms-viewport { zoom: 1; }
+@-o-viewport { zoom: 1; }
+@viewport { zoom: 1; }
+
+* {
+	&, &:before, &:after {
+    @include box-sizing(border-box);
+    @include prefix(box-sizing, border-box);
+	}
+}
+
+/* Base styles: opinionated defaults
+* ------------------------------------------ */
+
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: #2b2b33;
+}

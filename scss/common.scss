@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+/* The common class
+* ------------------------------------------ */
+
+.title {
+  text-align: left;
+  @include font-size(50, 68);
+
+  &.ultra-light {
+    letter-spacing: 1px;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.size {
+    @include font-size(36, 40);
+  }
+  
+  &.shadow {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  &.white {
+    color: #fff;
+  }
+
+  &.grey {
+    color: #666;
+  }
+  
+  &.darkgrey {
+    color: #2b2b2b;
+  }
+
+  &.black {
+    color: #000;
+  }
+
+  &.dark {
+    color: #353e48;
+  }
+}
+
+.subtitle {
+  @include font-size(26, 36);
+  color: #4a4a4a;
+
+  &.ultra-light {
+    letter-spacing: 1px;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.white {
+    color: #fff;
+  }
+  
+  &.grey {
+    color: #666;
+  }
+}
+
+.text {
+  text-align: left;
+  @include font-size(14, 22);
+
+  &.ultra-light {
+    letter-spacing: 1px;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.size {
+    @include font-size(20, 32);
+  }
+
+  &.shadow {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  &.white {
+    color: #fff;
+  }
+
+  &.grey {
+    color: #666;
+  }
+}
+
+.link {
+  text-align: left;
+  text-decoration: none;
+
+  &.ultra-light {
+    letter-spacing: 1px;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.white {
+    color: #fff;
+  }
+
+  &.blue {
+    color: #00c1d5;
+  }
+
+  &.block {
+    display: block;
+  }
+
+  &.inline-block {
+    display: inline-block;
+  }
+
+  &.padding-right {
+    padding-right: 10px;
+  }
+
+  &.padding-left {
+    padding-left: 10px;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 14px;
+  position: relative;
+  border: 1px solid #fff;
+  @include prefix(border-radius, 5px);
+  text-decoration: none;
+  font-style: normal;
+  cursor: pointer;
+
+  &.width {
+    width: 210px;
+  }
+
+  &.purple {
+    border: 1px solid #6b3586;
+    background: #6b3586;
+    color: #fff;
+  }
+
+  &.grey {
+    border: 1px solid #403f47;
+    background: #403f47;
+    color: #ccc;
+  }
+
+  &.white {
+    border: 1px solid #fff;
+    background: #fff;
+    color: #000;
+  }
+
+  &.dark {
+    border: 1px solid #2B2B33;
+    background: #2B2B33;
+    color: #fff;
+  }
+
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.size {
+    @include font-size(16, 32);
+  }
+
+  &.margin-top {
+    margin-top: 10px;
+  }
+
+  &.margin-right {
+    margin-right: 10px;
+  }
+
+  &.margin-left {
+    margin-left: 10px;
+  }
+
+  &.margin-bottom {
+    margin-bottom: 10px;
+  }
+
+  &.height {
+    height: 70px;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.no-radius {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  &.picto {
+
+    &:after{
+      content:"";
+      display: block;
+      border-style: solid;
+      border-width: 6px 0 6px 6px;
+      border-color: transparent transparent transparent #ccc;
+      position: absolute;
+      top: 30px; right: 32px;
+    }
+  }
+}
+
+/* Required fillorfit plugin
+* ------------------------------------------ */
+
+.fillorfit {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Update browser with chromeframe
+* ------------------------------------------ */
+
+#browser-upgrade {
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 20px;
+  @include prefix(background, rgba(0, 0, 0, 0.8));
+  text-align: center;
+  vertical-align: middle;
+  
+  p {
+    vertical-align: middle;
+    display: table-cell;
+    @include font-size(26, 30);
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+  }
+}

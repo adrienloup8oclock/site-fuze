@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+.leadership-page {
+	width: 100%;
+
+	.inside {
+		max-width: 1160px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 80px 20px;
+		font-size: 0;
+
+		.column {
+			display: inline-block;
+			width: 49.9%;
+			vertical-align: top;
+
+			&.left {
+				padding-right: 35px;
+			}
+
+			&.right {
+				padding-left: 35px;
+			}
+		}
+	}
+
+	.figure {
+		background: #fff;
+		border: 1px solid #eee;
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+		position: relative;
+		cursor: pointer;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.figcaption {
+			height: 70px;
+			margin: 28px 22px 0;
+			overflow: hidden;
+			@include prefix(transition, height 450ms ease);
+
+			h2 {
+				@include font-size(15, 30);
+				font-weight: bold;
+				color: #2B2B2B;
+			}
+
+			p {
+				margin-bottom: 18px;
+				@include font-size(14, 20);
+				color: #69696E;
+			}
+		}
+
+		&:after {
+	    display: block;
+	    content: "";
+	    width: 27px;
+	    height: 15px;
+	    background: url(#{$images_dir}sprite.png) no-repeat 0 -15px; 
+	    position: absolute;
+	    bottom: 20px;
+	    left: 50%;
+	    margin-left: -13px;
+		}
+
+		&.active {
+			&:after {
+		    background-position: 0 0; 
+			}
+		}
+	}
+}
+

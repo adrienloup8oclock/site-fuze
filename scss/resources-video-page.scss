@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/*!
+ * fuse formerly thinkingphones 2016
+ * required: ressources.scss
+ */
+
+.resources-video {
+	width: 100%;
+
+	.column {
+		display: inline-block;
+		vertical-align: top;
+
+		&.right {
+			width: 31%;
+			padding-left: 40px;
+		}
+
+		&.left {
+			width: 68%;
+		}
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.subtitle {
+		@include font-size(14, 20);
+		font-weight: bold;
+		color: #2b2b2b;
+	}
+
+	.info {
+		display: block;
+		margin-bottom: 10px;
+		@include font-size(13, 20);
+		color: #69696e;
+	}
+
+	.text {
+		@include font-size(13, 20);
+		color: #69696e;
+	}
+}

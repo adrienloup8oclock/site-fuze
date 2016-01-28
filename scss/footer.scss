@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+/* The head
+* ----------------------------------------------
+*  Set the CSS style for the footer element.
+*/
+
+#footer {
+  background: #2C2C3A;
+  height: 300px;
+  padding-bottom: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+
+  .inside {
+    max-width: 1280px;
+    width: 100%;
+    padding: 26px 20px 0;
+    margin: 0 auto;
+    font-size: 0;
+  }
+
+  .column {
+    display: inline-block;
+    padding-right: 40px;
+    vertical-align: top;
+
+    ul {
+
+      li {
+        margin-bottom: 16px;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 5px;
+        @include font-size(18, 22);
+        color: #A388A0;
+      }
+
+      a {
+        text-decoration: none;
+        @include font-size(14, 16);
+        color: #A5A5A8;
+      }
+    }
+  }
+}
+
+#over-footer {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0; left: 0;
+  background: #1C1C26;
+
+  .inside {
+    padding: 12px 20px;
+
+    p {
+      @include font-size(14, 16);
+      color: #7C7C81;
+    }
+
+    a {
+      text-decoration: none;
+      color: #CACACB;
+    }
+  }
+}
+
+#sociallink {
+  text-align: left;
+  position: relative;
+  left: -15px;
+
+  ul {
+    width: 100%;
+    font-size: 0;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: -5000px;
+
+    span {
+      position: absolute;
+      top: 100%;
+    }
+
+    &:after {
+      display: block;
+      content: "";
+      width: 24px;
+      height: 25px;
+      position: absolute;
+      top: 50%; left: 50%;
+      margin: -12px 0 0 -12px;
+      background-image: url(#{$images_dir}socialink.png);
+      background-repeat: no-repeat;
+    }
+
+    &.twitter {
+      &:after {
+        background-position: 3px 0;
+      }
+    }
+
+    &.facebook {
+      &:after {
+        background-position: -34px 0;
+      }
+    }
+
+    &.pinterest {
+      &:after {
+        background-position: -66px 0;
+      }
+    }
+
+    &.youtube {
+      &:after {
+        background-position: -105px 0;
+      }
+    }
+
+    &.Googleplus {
+      &:after {
+        background-position: -143px 0;
+      }
+    }
+  }
+}
+
+/* Retina @2x
+* ---------------------------------------------- */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+  #sociallink {
+   
+    a {
+      width: 48px;
+      height: 50px;
+
+      &:after {
+        width: 48px;
+        height: 50px;
+        margin: -25px 0 0 -24px;
+        background-image: url(#{$images_dir}socialink@2x.png);
+        @include prefix(background-size, 190px auto);
+      }
+
+      &.twitter {
+        &:after {
+          background-position: 12px 10px;
+        }
+      }
+
+      &.facebook {
+        &:after {
+          background-position: -29px 10px;
+        }
+      }
+
+      &.pinterest {
+        &:after {
+          background-position: -73px 10px;
+        }
+      }
+
+      &.youtube {
+        &:after {
+          background-position: -114px 10px;
+        }
+      }
+
+      &.Googleplus {
+        &:after {
+          background-position: -162px 10px;
+        }
+      }
+    }
+  }
+
+}

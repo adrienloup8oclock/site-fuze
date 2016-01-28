@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+.get-started-page {
+	width: 100%;
+
+	.inside {
+		max-width: 1280px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 200px 20px;
+		overflow: hidden;
+		font-size: 0;
+	}
+
+	#slideshow-get-started {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		padding-top: 80px;
+		overflow: hidden;
+	  @include prefix(touch-action, pan-y);
+	}
+
+	.wrap {
+		position: relative;
+		width: 80%;
+		height: 100%;
+		margin: 0 auto;
+		overflow: hidden;
+
+		&:after {
+			content: "";
+			display: inline-block;
+			width: 100%;
+			font-size: 0;
+			height: 1px;
+			line-height: 1px;
+			margin-top: 45%;
+		}
+	}
+
+	.slideshow {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+	}
+
+	.slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.column {
+		display: inline-block;
+		vertical-align: top;
+
+		&.right {
+			width: 24.9%;
+			padding-right: 20px;
+		}
+
+		&.left {
+			width: 75%;
+		}
+	}
+
+	.image {
+		display: block;
+		width: 100%;
+		height: auto
+	}
+
+	.fuze-slideshow-arrow-horizontal-tol, .fuze-slideshow-arrow-horizontal-bor {
+		display: block;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 10%;
+		cursor: pointer;
+
+		&:after {
+			content: "";
+			display: block;
+			width: 42px;
+			height: 81px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -42px 0 0 -21px;
+			background-image: url(#{$images_dir}sprite.png);
+			background-repeat: no-repeat;
+		}
+
+		&.disabled {
+			display: none;
+		}
+	}
+
+	.fuze-slideshow-arrow-horizontal-tol {
+		left: 0;
+
+		&:after {
+			background-position: -180px 0;
+		}
+
+		&:hover {
+			&:after {
+				background-position: -96px 0;
+			}
+		}
+	}
+
+	.fuze-slideshow-arrow-horizontal-bor {
+		right: 0;
+
+		&:after {
+			background-position: -222px 0;
+		}
+
+		&:hover {
+			&:after {
+				background-position: -138px 0;
+			}
+		}
+	}
+
+	.fuze-slideshow-nav-horizontal {
+		width: 100%;
+		height: 50px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+	}
+
+	.fuze-slideshow-bullet {
+		display: inline-block;
+		min-height: 48px;
+		margin: 0 10px;
+		padding-top: 30px;
+		position: relative;
+		text-decoration: none;
+		@include font-size(16, 26);
+		color: #666;
+
+		&:after {
+			content: "";
+			display: block;
+			width: 25px;
+			height: 25px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -12px;
+		  border: 1px solid #fff;
+		  @include prefix(border-radius, 50%);
+		  @include prefix(transition, background 400ms ease);
+		  background: #e2e9ef;
+		}
+
+		&.actived {
+			color: #00c1d5;
+
+			&:after {
+				content: "\2713";
+				background: #00c1d5;
+				color: #fff;
+				//background: #00c1d5;
+			}
+		}
+
+		&.active {
+			color: #00c1d5;
+
+			&:after {
+				content: "";
+				background: #00c1d5;
+			}
+		}
+
+		&:hover {
+
+			&:after {
+				background: #00c1d5;
+			}
+		}
+	}
+
+	.title {
+		margin-top: 70px;
+		@include font-size(16, 26);
+		font-weight: bold;
+	}
+
+	.text {
+		@include font-size(16, 26);
+	}
+}

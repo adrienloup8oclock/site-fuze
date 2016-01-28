@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+.landing-page {
+
+	#main {
+		padding-bottom: 40px;
+	}
+
+	#title {
+		display: inline-block;
+	  width: 89px;
+	  height: 108px;
+	  margin: 16px 0;
+	  background: url(#{$images_dir}logo.png) no-repeat 0;
+	}
+
+	#over-header {
+		width: 100%;
+		background: #2c2c2c;
+		text-align: center;
+	}
+
+	#header {
+	  position: static;
+	  height: 300px;
+	  overflow: hidden;
+	  background-repeat: no-repeat;
+	  background-position: center center;
+	  background-attachment: scroll;
+	  @include prefix(background-size, cover);
+
+	  .inside {
+	    height: auto;
+	    margin-top: 40px;
+	  }
+
+	  .title {
+	    @include font-size(40, 48);
+	  }
+	}
+
+}

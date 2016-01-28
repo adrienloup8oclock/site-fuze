@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+/* The head
+* ----------------------------------------------
+*  Set the CSS style for the header element.
+*/
+
+#header {
+  width: 100%;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 5;
+
+  .inside {
+    max-width: 1280px;
+    width: 100%;
+    height: 160px;
+    margin: 0 auto;
+    padding: 26px 20px 0;
+    position: relative;
+    font-size: 0;
+  }
+}
+
+#title {
+  display: inline-block;
+  width: 89px;
+  height: 108px;
+  vertical-align: top;
+  background: url(#{$images_dir}logo.png) no-repeat 0;
+}
+
+#sentence {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 0 0 5px;
+  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+  letter-spacing: 2px;
+  @include font-size(14, 14);
+  font-style: italic;
+  font-weight: bold;
+  color: #00F9FF;
+}
+
+/* More info
+* ---------------------------------------------- */
+
+#tooltip {
+  display: inline-block;
+  position: absolute;
+  top: 26px; right: 20px;
+  vertical-align: top;
+  @include font-size(15, 15);
+  color: #fff;
+
+	ul {
+	  width: 100%;
+    font-size: 0;
+
+		li {
+      margin-left: 10px;
+		  display: inline-block;
+      font-style: italic;
+      @include font-size(12, 12);
+      position: relative;
+
+      &.active {
+
+        .modal {
+          visibility: visible;
+          @include prefix(opacity, 1);
+        }
+      }
+    }
+  }
+
+  .link {
+    display: block;
+    padding: 6px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .modal {
+    width: 290px;
+    background: #2B2B33;
+    position: absolute;
+    top: 45px; right: 50%;
+    margin-right: -150px;
+    visibility: hidden;
+    @include prefix(opacity, 0);
+    @include prefix(transition, opacity 450ms ease);
+    @include prefix(border-radius, 4px);
+    @include prefix(font-smoothing, antialiased);
+    
+    &.padding {
+      padding: 20px;
+    }
+
+    &:after {
+      content: "";
+      width: 0; 
+      height: 0; 
+      position: absolute;
+      top: -11px; left: 50%;
+      margin-left: -6px;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 12px solid #2b2b33;
+    }
+
+    &.right {
+      right: -10px;
+      margin-right: 0;
+
+      &:after {
+        left: auto;
+        right: 30px;
+      } 
+    }
+
+    .button {
+      display: table;
+
+      span {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      em {
+        display: block;
+        @include font-size(12, 14);
+        color: #837d85;
+      }
+    }
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+/* Retina @2x
+* ---------------------------------------------- */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+			 only screen and (-o-min-device-pixel-ratio: 3/2),
+			 only screen and (min--moz-device-pixel-ratio: 1.5),
+			 only screen and (min-device-pixel-ratio: 1.5) {
+
+	#title {
+	  background: url(#{$images_dir}logo@2x.png) no-repeat 0;
+	  @include prefix(background-size, 88px 107px);
+	}
+
+}

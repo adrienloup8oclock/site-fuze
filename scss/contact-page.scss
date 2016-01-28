@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+.contact-page {
+
+	.inside {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+		text-align: center;
+		font-size: 0;
+	}
+
+	.column {
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+
+		&.left {
+			width: 65%;
+			padding: 80px 60px;
+			background: #fff;
+		}
+
+		&.right {
+			width: 34.9%;
+			padding: 80px 20px 80px 60px;
+		}
+	}
+
+	.tr {
+		margin-top: 40px;
+
+		strong {
+			@include font-size(14, 20);
+			font-weight: bold;
+			color: #2b2b2b;
+		}
+
+		p {
+			@include font-size(14, 20);
+			color: #69696e;
+		}
+	}
+
+	.location {
+		display: block;
+		margin: 50px 0;
+		position: relative;
+		text-align: left;
+		@include font-size(14, 20);
+		font-weight: bold;
+		color: #2b2b2b;
+
+		&:after {
+	    display: block;
+	    content: "";
+	    position: absolute;
+	    top: 50%;
+	    left: 0;
+	    background-image: url(#{$images_dir}location.jpg); 
+	    background-repeat: no-repeat; 
+		}
+
+		&.us {
+			padding-left: 70px;
+
+			&:after {
+		    width: 58px;
+		    height: 37px;
+		    margin-top: -18px;
+		   	background-position: 0 -53px;
+			}
+		}
+
+		&.ca {
+			padding-left: 74px;
+
+			&:after {
+		    width: 63px;
+		    height: 53px;
+		    margin-top: -26px;
+		   	background-position: 0 -89px;
+			}
+		}
+
+		&.emea {
+			padding-left: 104px;
+
+			&:after {
+		    width: 91px;
+		    height: 53px;
+		    margin-top: -26px;
+		   	background-position: 0 0;
+			}
+		}
+	}
+
+	.city {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #dbdbdb;
+		text-align: left;
+
+		strong {
+			@include font-size(14, 20);
+			font-weight: bold;
+			color: #2b2b2b;
+		}
+
+		p {
+			@include font-size(14, 20);
+			color: #69696e;
+		}
+	}
+
+	.hbspt-form {
+		margin-top: 40px;
+	}
+}

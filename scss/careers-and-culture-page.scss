@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+.careers-and-culture-page {
+
+	.section {
+		width: 100%;
+		position: relative;
+		z-index: 1;
+		background-color: #fff; 
+		background-repeat: no-repeat; 
+		background-position: 0 0;
+		font-size: 0;
+
+		&.grey {
+			background: #f3f3f3;
+		}
+
+		&.purple {
+			background: #3b225f;
+		}
+
+		&.blue {
+			background: #3abdc0;
+		}
+
+		&.cover {
+			padding: 170px 0;
+		  background-repeat: no-repeat;
+		  background-position: center top;
+		  background-attachment: scroll;
+		  @include prefix(background-size, cover);
+		}
+	}
+
+	.column {
+		display: inline-block;
+		width: 49.9%;
+		vertical-align: top;
+	}
+
+	.inside {
+		max-width: 1280px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 120px 20px 140px;
+		font-size: 0;
+	}
+
+	.wrap {
+		max-width: 420px;
+		width: 100%;
+
+		&.margin-top {
+			margin-top: 40px;
+		}
+
+		&.margin-left {
+			margin-left: 100px;
+		}
+	}
+
+	.title {
+		margin-bottom: 40px;
+	}
+
+	.subtitle {
+		display: block;
+		margin-bottom: 40px;
+	}
+
+	.text {
+		margin-bottom: 20px;
+	}
+
+	.link {
+		display: inline-block;
+		margin-bottom: 40px;
+		@include font-size(16, 18);
+	}
+
+	.image {
+		display: block;
+		max-width: 800px;
+		width: 100%;
+		height: auto;
+
+		&.margin-top {
+			margin-top: 20px;
+		}
+	}
+
+	.list {
+		width: 100%;
+		margin-top: 80px;
+		font-size: 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 30px;
+		}
+
+		a {
+			display: block;
+			width: 120px;
+			height: 64px;
+			position: relative;
+
+			&:after {
+		    content: "";
+		    display: block;
+		    width: 69px;
+		    height: 64px;
+		    position: absolute;
+		    top: 0; left: 50%;
+		    background-image: url(#{$images_dir}partner.png);
+		    background-repeat: no-repeat;
+			}
+
+			&.dropbox {
+
+				&:after {
+			    width: 56px;
+			    margin-left: -29px;
+			    background-position: 0 0;
+				}
+			}
+
+			&.okta {
+
+				&:after {
+			    width: 110px;
+				  margin-left: -57px;
+			    background-position: -56px 0;
+				}
+			}
+
+			&.box {
+
+				&:after {
+			    width: 76px;
+				  margin-left: -38px;
+			    background-position: -166px 0;
+				}
+			}
+
+			&.microsoft-outlook {
+
+				&:after {
+			    width: 54px;
+				  margin-left: -24px;
+			    background-position: -243px 0;
+				}
+			}
+
+			&.google-calendar {
+
+				&:after {
+			    width: 58px;
+				  margin-left: -27px;
+			    background-position: -297px 0;
+				}
+			}
+		}
+	}
+
+	.hbspt-form {
+  	max-width: 690px;
+
+	  fieldset {
+	  	display: inline-block;
+	  	width: 49.9%;
+	  	padding: 10px;
+	  	vertical-align: top;
+	  }
+	}
+}

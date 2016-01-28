@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+.partner-app-integrations-page {
+	width: 100%;
+
+	.inside {
+		max-width: 1160px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 80px 20px;
+		font-size: 0;
+	}
+
+	.figure {
+    display: inline-block;
+		width: 50%;
+		margin-bottom: 50px;
+    position: relative;
+    vertical-align: top;
+
+		img {
+			display: block;
+			width: 50%;
+			height: auto;
+			margin: 0 auto 50px;
+		}
+	}
+	
+	.wrap {
+		margin: 0 22px;
+		background: #fff;
+		border: 1px solid #eee;
+	}
+
+	.title {
+		padding: 28px 22px;
+		@include font-size(40, 44);
+	}
+}

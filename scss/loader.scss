@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+/*! fuse formerly thinkingphones 2016 */
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #000;
+  transform: translateZ(0);
+
+  .text {
+    position: absolute;
+    bottom: 10px; right: 12px;
+    @include font-size(14, 16);
+    @include prefix(opacity, 1);
+    color: #7c7c81;
+  }
+}
+
+.petal {
+  width: 30px;
+  height: 130px;
+  margin: auto;
+  @include prefix(animation, rotate 6s linear infinite);
+  @include prefix(opacity, .8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  &:nth-child(2) {
+    @include prefix(animation, rotate 6s linear infinite);
+    @include prefix(animation-delay, -5s);
+  }
+
+  &:nth-child(3) {
+    @include prefix(animation, rotate 6s linear infinite);
+    @include prefix(animation-delay, -2.5s);
+  }
+}
+
+.a, .b, .c {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+
+  &:after {
+    display: block;
+    content: "";
+    width: 32px;
+    height: 36px;
+    @include prefix(transform, scale(.5));
+    @include prefix(border-radius, 50%  50%  50%  50%  / 70%   70%   40%  40%);
+  }
+}
+
+.a {
+  animation: move 1.5s ease-in-out infinite alternate-reverse, zIndex 3.5s ease-in-out infinite reverse;
+
+  &:after {
+    background: #fde230;
+    animation: zoom 1.5s ease-in-out infinite alternate-reverse;
+    animation-delay: -1s;
+  }
+}
+
+.b {
+  animation: move 1s ease-in-out infinite alternate, zIndex 3.5s ease-in-out infinite;
+  animation-delay: -1s, -1s;
+
+  &:after {
+    background: #f54267;
+    animation: zoom 1.5s ease-in-out infinite alternate;
+    animation-delay: -1.8s;
+  }
+}
+
+.c {
+  animation: move 1s ease-in-out infinite alternate-reverse, zIndex 3.5s ease-in-out infinite reverse;
+  animation-delay: -1s, -1s;
+
+  &:after {
+    background: #3abdc0;
+    animation: zoom 1.5s ease-in-out infinite alternate-reverse;
+    animation-delay: -1.6s;
+  }
+}
+
+@keyframes move {
+  
+  100% {
+    transform: translateY(250%) translateZ(0);
+  }
+}
+
+@keyframes zoom {
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zIndex {
+
+  25% {
+    z-index: 1;
+  }
+
+  75% {
+    z-index: -1;
+  }
+}
+@keyframes rotate {
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.loaded {
+
+  #loader {
+    visibility: hidden;
+    @include prefix(transform, translateX(100%));
+    @include prefix(transition, all 0.5s 0.3s ease-out);
+    
+    .petal, .text {
+      @include prefix(opacity, 0);
+      @include prefix(transition, opacity 0.3s ease-out);
+    }
+  }
+}
